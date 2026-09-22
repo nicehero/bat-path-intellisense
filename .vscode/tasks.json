@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // F5 调试时默认使用的构建任务：后台增量编译。
+      "type": "npm",
+      "script": "watch",
+      "label": "npm: watch",
+      "problemMatcher": "$tsc-watch",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never",
+        "group": "watchers"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      // 一次性全量编译，用于打包前确认无编译错误。
+      "type": "npm",
+      "script": "compile",
+      "label": "npm: compile",
+      "problemMatcher": "$tsc",
+      "group": "build"
+    }
+  ]
+}

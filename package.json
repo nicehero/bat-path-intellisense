@@ -9,6 +9,10 @@
     "name": "nicehero",
     "url": "https://github.com/nicehero"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicehero/bat-path-intellisense.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },

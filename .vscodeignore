@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------------
+# vsce 打包排除清单
+#
+# 发布包中真正需要的只有：
+#   package.json / out/**/*.js / README.md / LICENSE / CHANGELOG.md
+#   （README.md 与 LICENSE 由 vsce 强制包含，无需在此声明）
+# ---------------------------------------------------------------------
+
+# 源码：已在编译期输出为 out/ 下的 JS
+src/**
+**/*.ts
+**/*.map
+
+# 编译与工程配置
+tsconfig.json
+tsconfig.*.json
+.editorconfig
+
+# 开发与调试
+.vscode/**
+.vscode-test/**
+out/test/**
+test/**
+samples/**
+
+# 版本控制与 CI
+.gitignore
+.gitattributes
+.github/**
+
+# 锁文件与本地打包产物
+package-lock.json
+*.vsix
