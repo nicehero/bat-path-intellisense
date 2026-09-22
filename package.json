@@ -1,0 +1,69 @@
+{
+  "name": "bat-path-intellisense",
+  "displayName": "BAT Path IntelliSense",
+  "description": "Automatic file and directory path completion for Windows BAT and CMD files.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "author": {
+    "name": "nicehero",
+    "url": "https://github.com/nicehero"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:bat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "bat",
+        "aliases": [
+          "BAT",
+          "Batch",
+          "Windows Batch"
+        ],
+        "extensions": [
+          ".bat",
+          ".cmd"
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "BAT Path IntelliSense",
+      "properties": {
+        "batPathIntellisense.autoTrigger": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically show file and directory suggestions while typing paths."
+        },
+        "batPathIntellisense.showFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show files in path suggestions."
+        },
+        "batPathIntellisense.showDirectories": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show directories in path suggestions."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  }
+}
+
