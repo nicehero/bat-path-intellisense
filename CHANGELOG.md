@@ -5,6 +5,17 @@ BAT Path IntelliSense 的所有重要变更都会记录在此文件中。
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
 版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [0.0.2] - 2026-09-23
+
+### 修复
+
+- 目录补全插入字面量 `$0`：选中 `.\out\` 的补全后会得到 `.\out$0`。
+- 文件名含 `$` 时补全结果被错误转义：`a$b.txt` 会补全成 `a\$b.txt`。
+
+### 变更
+
+- 新增 `keywords`，提升在 Marketplace 的搜索可见性。
+
 ## [0.0.1] - 2026-09-22
 
 ### 新增

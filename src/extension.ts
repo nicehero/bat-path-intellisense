@@ -144,14 +144,14 @@ class BatPathCompletionProvider
                 ? "Directory"
                 : "File";
 
+            // insertText 传普通字符串时是字面量插入，不做 snippet 解析，
+            // 因此文件名里的 $、} 等字符无需转义。
+            // 目录补上结尾的 \，光标会落在插入内容之后，可继续输入下一级。
             if (isDirectory) {
                 item.label = `${name}\\`;
-
-                item.insertText = new vscode.SnippetString(
-                    escapeCompletionText(name) + "\\$0"
-                );
+                item.insertText = `${name}\\`;
             } else {
-                item.insertText = escapeCompletionText(name);
+                item.insertText = name;
             }
 
             // 让 VS Code 用文件名进行过滤
@@ -359,18 +359,4 @@ function splitDirectoryAndFilter(
             separator + 1
         )
     };
-}
-
-
-/**
- * VS Code Snippet 中需要转义的字符。
- */
-function escapeCompletionText(
-    value: string
-): string {
-
-    return value
-        .replace(/\\/g, "\\\\")
-        .replace(/\$/g, "\\$")
-        .replace(/}/g, "\\}");
 }

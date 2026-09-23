@@ -23,6 +23,9 @@ out/test/**
 test/**
 samples/**
 
+# 本地构建辅助脚本
+pack.bat
+
 # 版本控制与 CI
 .gitignore
 .gitattributes
