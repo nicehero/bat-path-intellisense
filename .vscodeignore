@@ -23,6 +23,10 @@ out/test/**
 test/**
 samples/**
 
+# README 插图：vsce 打包时会把 README 里的相对路径改写为仓库的 GitHub URL，
+# 因此放进 vsix 的副本永远不会被引用。图片必须提交到仓库才能显示。
+images/**
+
 # 本地构建辅助脚本
 pack.bat
 

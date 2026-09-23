@@ -5,6 +5,13 @@ BAT Path IntelliSense 的所有重要变更都会记录在此文件中。
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，
 版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [0.0.3] - 2026-09-23
+
+### 文档
+
+- README 增加补全效果演示动图。
+- 安装说明改为以 Marketplace 为主。
+
 ## [0.0.2] - 2026-09-23
 
 ### 修复

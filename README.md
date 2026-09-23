@@ -5,6 +5,8 @@
 写 `copy`、`xcopy`、`del`、`call` 这类命令时，只要输入 `.\`、`..\`、`C:\` 或 `\\server\share\`，
 就会自动列出对应目录下的文件和文件夹。
 
+![路径补全演示](images/demo.gif)
+
 ## 功能特性
 
 - **自动补全**：输入路径分隔符后弹出候选列表，`Ctrl+Space` 也可手动唤出。
@@ -38,13 +40,14 @@ dir \\nas\share\
 
 ## 安装
 
-### 从 VSIX 安装
+在 VS Code 的 **扩展** 面板搜索 `BAT Path IntelliSense`，或按 `Ctrl+P` 运行：
 
-```bash
-code --install-extension bat-path-intellisense-0.0.1.vsix
+```
+ext install nicehero.bat-path-intellisense
 ```
 
-或在 VS Code 中打开 **扩展** 面板 → 右上角 `...` 菜单 → **从 VSIX 安装...** → 选择 `.vsix` 文件。
+也可以直接访问
+[Marketplace 页面](https://marketplace.visualstudio.com/items?itemName=nicehero.bat-path-intellisense)。
 
 ### 从源码运行
 

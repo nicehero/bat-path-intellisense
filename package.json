@@ -2,7 +2,7 @@
   "name": "bat-path-intellisense",
   "displayName": "BAT Path IntelliSense",
   "description": "Automatic file and directory path completion for Windows BAT and CMD files.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "nicehero",
   "license": "MIT",
   "author": {
